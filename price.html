@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1c1c1c;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        .plan {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 18px;
+            width: 300px;
+            box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+            border: 2px solid gold;
+        }
+        .plan:hover {
+            transform: scale(1.05);
+        }
+        .featured {
+            background: linear-gradient(135deg, #B78628, #DBA514, #EEB609, #FCC201, #C69320);
+            color: black;
+            transform: scale(1.05);
+        }
+        .plan h3 {
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            padding: 5px;
+            font-size: 16px;
+        }
+        .btn {
+            background: linear-gradient(135deg, #B78628, #DBA514, #EEB609, #FCC201, #C69320);
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .featured .btn {
+            background: black;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose Your Plan</h1>
+    
+    <div class="pricing-container">
+        <div class="plan">
+            <h3>Student Plan</h3>
+            <p class="price">Free</p>
+            <ul class="features">
+                <li><i class="fa fa-check"></i> Basic Access</li>
+                <li><i class="fa fa-check"></i> Community Support</li>
+                <li><i class="fa fa-times"></i> No Priority Support</li>
+                <li><i class="fa fa-times"></i> Limited Features</li>
+            </ul>
+            <button class="btn">Select</button>
+        </div>
+        
+        <div class="plan featured">
+            <h3>Normal Plan</h3>
+            <p class="price">$10/month</p>
+            <ul class="features">
+                <li><i class="fa fa-check"></i> Full Access</li>
+                <li><i class="fa fa-check"></i> Email Support</li>
+                <li><i class="fa fa-check"></i> Regular Updates</li>
+                <li><i class="fa fa-check"></i> Regular Updates</li>
+                <li><i class="fa fa-check"></i> Regular Updates</li>
+                <li><i class="fa fa-check"></i> Regular Updates</li>
+                <li><i class="fa fa-check"></i> Regular Updates</li>
+                <li><i class="fa fa-check"></i> Regular Updates</li>
+                <li><i class="fa fa-check"></i> Regular Updates</li>
+                <li><i class="fa fa-check"></i> Regular Updates</li>
+                <li><i class="fa fa-check"></i> Regular Updates</li>
+                <li><i class="fa fa-check"></i> Regular Updates</li>
+                <li><i class="fa fa-times"></i> No Premium Support</li>
+            </ul>
+            <button class="btn">Select</button>
+        </div>
+        
+        <div class="plan">
+            <h3>Pro Plan</h3>
+            <p class="price">$30/month</p>
+            <ul class="features">
+                <li><i class="fa fa-check"></i> Premium Access</li>
+                <li><i class="fa fa-check"></i> 24/7 Support</li>
+                <li><i class="fa fa-check"></i> Advanced Features</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+                <li><i class="fa fa-check"></i> Free Updates</li>
+            </ul>
+            <button class="btn">Select</button>
+        </div>
+    </div>
+</body>
+</html>

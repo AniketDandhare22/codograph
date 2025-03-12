@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="code-editor-icon-vector-symbol-design-illustration-logo-isolated-sign-high-quality-black-style-287258661.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Visualizer</title>
+    <link rel="stylesheet" href="mains.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/dracula.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        <!-- CodeMirror Default Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.css">
+
+    <!-- CodeMirror Themes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/material.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/eclipse.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/night.min.css">
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+</head>
+
+<body>
+    <!-- Account Popup -->
+    <div id="account-popup" class="popup hidden">
+        <div class="popup-content">
+            <h3>Account Details</h3>
+            <p id="user-name">Username: Guest</p>
+            <p id="user-email">Email: Not Logged In</p>
+            <img id="user-photo" src="/icons/default-profile.png" alt="Profile Photo" style="width: 50px; height: 50px; border-radius: 50%;">
+            
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+            
+            <button class="gold-button" onclick="window.location.href='price.html'">Premium Plan</button>
+            <button class="logout-button" onclick="signOut()">Logout</button>
+            <button class="close-button" onclick="closePopup()">×</button>
+        </div>
+    </div>
+    
+
+
+<div id="main-content">
+    <div class="nav">
+        <div class="tag">
+            <div class="account">
+                <img src="/code-editor-icon-vector-symbol-design-illustration-logo-isolated-sign-high-quality-black-style-287258661.webp" alt="Account" class="account-img">
+            </div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="centre-nav">
+            <div class="clock-div">
+                <button id="toggle-clock" style="border-radius:7px 0px 0px 7px;" onclick="toggleClock()">
+                    <span class="material-symbols-outlined">timer</span>
+                </button>
+                <button id="clock">00 : 00 : 00</button>
+                <button id="toggle-clock" style="border-radius:0px 7px 7px 0px;" onclick="resetClock()"><span class="material-symbols-outlined">
+                    restart_alt
+                    </span></button>
+            </div>
+        </div>
+        <div class="right-nav">
+            <div class="button-div">
+                <button class="btn1" style="border-radius:7px 0px 0px 7px;" onclick="detectAndVisualizeSorting()">
+                    <span class="material-symbols-outlined" style="font-size: 22px;">graph_3</span>
+                    Visualize
+                </button>
+                <button class="btn2" style="border-radius:0px 7px 7px 0px; background-color: green;" onclick="runCode()">
+                    <span class="material-symbols-outlined">
+                        play_circle
+                        </span>
+                    Run Code</button>
+            </div>
+            <div class="account">
+                <img src="/icons/ca3914e1ec04b6c1a53fbfdd5d5a8f2e.jpg" alt="Account" class="account-img" id="a_image">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="editor resizable" id="editor">
+            <div class="header_code">
+                <h3>Code Editor</h3>
+                <select id="language-select" onchange="changeLanguage()">
+                    <option disabled selected style="color: rgb(173, 173, 173); font-weight: bolder;"> Language Selected: Default (C++)</option>
+                    <option value="cpp"> language-Selected : C++</option>
+                    <option value="java"> language-Selected : Java</option>
+                    <option value="python"> language-Selected : Python</option>
+                </select>
+                <label for="theme-select">Theme:</label>
+                    <select id="theme-select">
+                        <option value="dracula">Dracula</option>
+                        <option value="monokai">Monokai</option>
+                        <option value="material">Material</option>
+                        <option value="eclipse">Eclipse</option>
+                        <option value="night">Night</option>
+                    </select>
+
+            </div>
+            <textarea id="code-editor">//C++ Language Selected By-Default :"Happy Coding"
+#include <iostream>
+using namespace std;        
+    int main() {
+        cout << "Hello, World!" << endl;
+        return 0;
+    }
+    </textarea>
+        </div>
+        <div class="resizer" id="editor-resizer"></div>
+        
+        <div class="right-panel resizable" id="right-panel">
+            <div class="visual-output resizable" id="visual-output" style="height: 50%;">
+                <h3>Visual Output</h3>
+                <div id="graph-output" style="width: 80%; height: 60%; background: white; color: black; display: flex; align-items: center; justify-content: center;">
+                    <canvas id="sortingCanvas"></canvas>
+                </div>
+                <div style="background: gray; padding: 10px; margin-top: 10px;">Memory: Root -> 45</div>
+            </div>
+            <div class="resizer-horizontal" id="visual-resizer"></div>
+            <div class="terminal resizable" id="terminal" style="height: 50%;">
+                <h3>Terminal Output:</h3>
+                <div id="output">$ Waiting for execution...</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="sorting.js"></script>
+
+    <script src="mains.js"></script>
+    <script src="detector.js"></script>
+    <script>
+        let clockInterval;
+        let startTime = 0; // Initial time in seconds (01:25:49)
+
+        function startClock() {
+            clockInterval = setInterval(updateClock, 1000);
+        }
+
+        function updateClock() {
+            startTime++;
+            let hours = Math.floor(startTime / 3600);
+            let minutes = Math.floor((startTime % 3600) / 60);
+            let seconds = startTime % 60;
+            document.getElementById('clock').innerText = 
+                String(hours).padStart(2, '0') + ' : ' + 
+                String(minutes).padStart(2, '0') + ' : ' + 
+                String(seconds).padStart(2, '0');
+        }
+
+        function resetClock() {
+            clearInterval(clockInterval);
+            startTime = 0;
+            document.getElementById('clock').innerText = '00 : 00 : 00';
+            startClock();
+        }
+
+        window.onload = startClock;
+
+        
+    </script>
+</body>
+</html>

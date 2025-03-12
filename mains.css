@@ -1,0 +1,452 @@
+/* General Styling */
+
+.material-symbols-outlined {
+    font-size: 22px; /* Ensures uniform icon size */
+    vertical-align: middle;
+}
+
+/* Default Dark Theme */
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* Popup Styles */
+.popup {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+/* Light Theme for Popup */
+body.light-theme .popup {
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: #45a049;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
+}
+#sortingCanvas {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 1px solid black;
+}
+
+.nav .tag a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+
+} .nav .centre-nav button {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #444;
+    border: none;
+}
+.header_code{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#toggle-clock{
+    padding: 6.5px;
+}
+
+.nav .tag a:hover, .nav .centre-nav button:hover {
+    background-color: #555;
+}
+
+/* Editor and Panel Styling */
+.container {
+    display: flex;
+    height: 80vh;
+    padding: 20px;
+}
+
+.editor, .right-panel {
+    width: 50%;
+    height: 100%;
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: #2d2d2d;
+}
+
+.editor h3, .right-panel h3 {
+    padding: 10px;
+    background-color: #444;
+    margin: 0;
+}
+.editor h3{
+    border-radius: 10px 0px 0px 0;
+    width: 60%;
+}
+
+textarea {
+    width: 100%;
+    height: 80%;
+    border: none;
+    padding: 10px;
+    background-color: #2d2d2d;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New', monospace;
+}
+
+#language-select {    
+    border-radius: 0 10px 0px 0;
+    padding: 8px;
+    width: 40%;
+    background-color: #444;
+    color: white;
+    border: none;
+}
+
+.resizer, .resizer-vertical, .resizer-horizontal {
+    background: #444;
+    cursor: ew-resize;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.nav {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6vmin;
+    background: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    align-items: center;
+}
+
+.nav a,
+.nav button {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    align-content: center;
+    cursor: pointer;
+    margin: 0;
+}
+
+.nav button {
+    padding: 0px 10px;
+    background: #1d1d1d;
+    font-weight: 700;
+    font-size: larger;
+}
+
+.nav button:hover {
+    border: 1px solid #ddd;
+}
+
+.nav button:active {
+    box-shadow: 1px 2px 10px rgba(255, 255, 255, 0.252);
+    border: 0;
+}
+
+
+.account-img {
+    width: 90%;
+    height: 100%;
+    border-radius: 100%;
+    background: white;
+
+}
+
+.account-img:hover {
+    cursor: pointer;
+    border: 2px solid #007bff;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: calc(100vh - 50px);
+    margin-top: 50px;
+}
+
+.right-nav {
+    justify-content: space-between;
+    display: flex;
+}
+
+.button-div {
+    justify-content: space-between;
+    display: flex;
+    margin: 4px;
+    margin-right: 10px;
+}
+
+
+
+.editor {
+    flex: 1;
+    background: #2d2d2d;
+    color: #ddd;
+    padding: 20px;
+    display: flex;
+    min-width: 30%;
+    flex-direction: column;
+    position: relative;
+}
+
+.editor textarea {
+    flex: 1;
+    background: #1e1e1e;
+    color: white;
+    border: none;
+    padding: 10px;
+    resize: none;
+}
+
+.CodeMirror {
+    height: 100% !important;
+    width: 100% !important;
+    font-size: x-large;
+}
+.right-panel {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 40%;
+    resize: horizontal;
+    overflow: auto;
+    position: relative;
+}
+
+.visual-output,
+.terminal {
+    padding: 20px;
+    position: relative;
+}
+
+.visual-output {
+    background: #252526;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.terminal {
+    background: black;
+    color: green;
+    height: 30%;
+    overflow-y: auto;
+    position: relative;
+}
+#output{
+    font-size: 18px;
+    padding: 20px;
+}
+.resizer {
+    width: 5px;
+    background: rgba(128, 128, 128, 0.052);
+    cursor: ew-resize;
+    position: relative;
+    z-index: 10;
+    transition: left 0 linear;
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+}
+
+.resizer-vertical {
+    height: 5px;
+    background: rgba(128, 128, 128, 0);
+    cursor: ns-resize;
+    position: absolute;
+}
+
+.resizer-horizontal {
+    height: 5px;
+    background: rgba(128, 128, 128, 0.054);
+    cursor: ns-resize;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 2.5px); /* Initially centered */
+    z-index: 10;
+    transition: top 0s linear; /* Makes movement smooth */
+    right: 0;
+}
+
+.tag {
+    margin-left: 1rem;
+    font-size: larger;
+    font-weight: 700;
+    gap: 4rem;
+    display: flex;
+}
+
+.resizable {
+    position: relative;
+}
+.resizer:hover{
+    background-color: #007bff;
+    border-radius: 10px;
+    cursor: e-resize;
+}
+.resizer-vertical:hover, .resizer-horizontal:hover {
+    background-color: #007bff;
+    cursor: n-resize;
+}
+
+.account {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    width: 4.5vmin;
+    margin-right: 10px;
+}
+
+.clock-div button {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.centre-nav {
+    margin-left: 1rem;
+}
+
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal {
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+.terminal h3 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+
+/* Blur only the main content when popup is open */
+.blur {
+    filter: blur(5px);
+    pointer-events: none; /* Prevent interactions when blurred */
+}
+
+/* Popup Positioned at Top-Right (Slightly Bigger) */
+.popup {
+    position: fixed;
+    top: 60px; /* Position below navbar */
+    right: 20px; /* Align to right */
+    background: #333;
+    padding: 20px;
+    width: 300px; /* Increased width */
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    z-index: 1001;
+    color: white;
+    display: none;
+}
+
+/* Show Popup */
+.popup.show {
+    display: block;
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Premium Plan Button */
+.gold-button {
+    background: gold;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Logout Button */
+.logout-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
