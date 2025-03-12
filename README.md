@@ -18,34 +18,28 @@ CodoGraph is a **browser-based open-source IDE** that **visualizes code structur
 ## 🚀 Getting Started  
 
 ### 1️⃣ Clone the Repository  
-sh``
-git clone https://github.com/Aniketdandhare22/codograph.git
-cd codograph``sh
-2️⃣ Install Dependencies
-sh``
-npm install``sh
-3️⃣ Run the Project  
-sh``
-npm start
-Then open http://localhost:3000 in your browser.
-``sh
-🤝 Contributing
-We welcome contributions! Feel free to fork the repo, create issues, and submit pull requests.
+```sh  
+git clone https://github.com/Aniketdandhare22/codograph.git  
+cd codograph  
+```
 
-📜 License
-MIT License
+### 2️⃣ Install Dependencies  
+```sh  
+npm install  
+```
 
-📩 Stay Connected
+### 3️⃣ Run the Project  
+```sh  
+npm start  
+```
+Then open **[http://localhost:3000](http://localhost:3000)** in your browser.  
+
+## 🤝 Contributing  
+We welcome contributions! Feel free to fork the repo, create issues, and submit pull requests.  
+
+## 📜 License  
+MIT License  
+
+## 📩 Stay Connected  
 For updates and discussions, follow the project or connect with us! 🚀
-
-
-
----
-
-This README provides a **clear and professional** overview of your project. Let me know if you need any modifications! 🚀
-
-
-
-
-
 
