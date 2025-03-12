@@ -1,1 +1,57 @@
-# codograph
+# 🚀 CodoGraph – Browser-Based Open-Source Code IDE  
+
+CodoGraph is a **browser-based open-source IDE** that **visualizes code structure, execution flow, and memory usage** in real-time. Designed for developers and learners, it helps in understanding **graph-based algorithms, memory allocation, and data structures** seamlessly.  
+
+## 🌟 Features  
+- **Graph Visualization** – Automatically detects graph-based code and displays traversal paths  
+- **Memory Insights** – Shows memory usage and allocation for better debugging  
+- **Live Execution** – Run and analyze code instantly within the same tab  
+- **Theming Support** – Light/Dark mode with multiple themes for better coding experience  
+- **User-Friendly Interface** – Simple, intuitive, and interactive editor  
+- **Open-Source & Extensible** – Contribute, modify, and enhance features  
+
+## 🛠️ Tech Stack  
+- **Frontend:** React.js, CSS  
+- **Backend:** Node.js, Express  
+- **Code Execution:** Web-based compiler integration  
+
+## 🚀 Getting Started  
+
+### 1️⃣ Clone the Repository  
+```sh
+git clone https://github.com/yourusername/codograph.git
+cd codograph
+2️⃣ Install Dependencies
+sh
+Copy
+Edit
+npm install
+3️⃣ Run the Project
+sh
+Copy
+Edit
+npm start
+Then open http://localhost:3000 in your browser.
+
+🤝 Contributing
+We welcome contributions! Feel free to fork the repo, create issues, and submit pull requests.
+
+📜 License
+MIT License
+
+📩 Stay Connected
+For updates and discussions, follow the project or connect with us! 🚀
+
+yaml
+Copy
+Edit
+
+---
+
+This README provides a **clear and professional** overview of your project. Let me know if you need any modifications! 🚀
+
+
+
+
+
+
